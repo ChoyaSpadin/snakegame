@@ -1,0 +1,166 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Telas do jogo */
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Tela inicial */
+#start-screen h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#start-screen button {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#start-screen button:hover {
+    background-color: #45a049;
+}
+
+/* Tela do jogo */
+#game-screen {
+    position: relative;
+}
+
+#game-canvas {
+    border: 2px solid #333;
+    background-color: #eee;
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+}
+
+#score-display {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Tela de fim de jogo */
+#game-over-screen h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+#game-over-screen p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+#game-over-screen button {
+    font-size: 1rem;
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4c4c;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#game-over-screen button:hover {
+    background-color: #ff3333;
+}
+
+/* Modal de pontuação */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+}
+
+.modal-content ul {
+    list-style: none;
+}
+
+.modal-content ul li {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+/* Botão modal */
+.modal-content button {
+    font-size: 1rem;
+    padding: 8px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #555;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    #game-canvas {
+        height: 80vw;
+        width: 80vw;
+    }
+    .screen {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Tela inicial do jogo -->
+    <div id="start-screen" class="screen">
+        <h1>Snake Game</h1>
+        <button onclick="startGame()">Start Game</button>
+        <button onclick="showHighScores()">High Scores</button>
+    </div>
+
+    <!-- Modal para mostrar os pontos mais altos -->
+    <div id="high-scores-modal" class="modal">
+        <div class="modal-content">
+            <h2>High Scores</h2>
+            <ul id="high-scores-list">
+                <!-- Scores irão aparecer aqui -->
+            </ul>
+            <button onclick="closeHighScores()">Close</button>
+        </div>
+    </div>
+
+    <!-- Tela do jogo -->
+    <div id="game-screen" class="screen hidden">
+        <div id="score-display">Score: <span id="score">0</span></div>
+        <canvas id="game-canvas"></canvas>
+    </div>
+
+    <!-- Tela de fim de jogo -->
+    <div id="game-over-screen" class="screen hidden">
+        <h2>Game Over</h2>
+        <p>Final Score: <span id="final-score">0</span></p>
+        <button onclick="restartGame()">Play Again</button>
+        <button onclick="returnToStart()">Return to Home</button>
+    </div>
+
+    <!-- Script principal -->
+    <script src="script.js"></script>
+</body>
+</html>
